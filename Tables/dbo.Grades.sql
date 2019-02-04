@@ -1,6 +1,6 @@
 CREATE TABLE [dbo].[Grades]
 (
-[ID_int] [int] NOT NULL,
+[ID_int] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 [Grade_nvc] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
 ) ON [PRIMARY]
 GO

@@ -8,7 +8,7 @@ CREATE TABLE [dbo].[Students]
 [NationCode_vc] [varchar] (14) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [BirthDay_vc] [varchar] (16) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [FatherName_nvc] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-[GradeeID_int] [int] NULL,
+[GradeeID_nvc] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [Branch_int] [int] NULL,
 [Phone_vc] [varchar] (24) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [Profile_nvc] [nvarchar] (300) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
@@ -22,5 +22,5 @@ ALTER TABLE [dbo].[Students] ADD CONSTRAINT [FK_Students_Cities] FOREIGN KEY ([C
 GO
 ALTER TABLE [dbo].[Students] ADD CONSTRAINT [FK_Students_EducationalBranchs] FOREIGN KEY ([Branch_int]) REFERENCES [dbo].[EducationalBranchs] ([ID_int])
 GO
-ALTER TABLE [dbo].[Students] ADD CONSTRAINT [FK_Students_Grades] FOREIGN KEY ([GradeeID_int]) REFERENCES [dbo].[Grades] ([ID_int])
+ALTER TABLE [dbo].[Students] ADD CONSTRAINT [FK_Students_Grades] FOREIGN KEY ([GradeeID_nvc]) REFERENCES [dbo].[Grades] ([ID_int])
 GO
